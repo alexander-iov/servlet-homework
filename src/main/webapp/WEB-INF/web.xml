@@ -6,8 +6,16 @@
         <servlet-name>Response Servlet</servlet-name>
         <servlet-class>task1.ResponseServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>My Servlet</servlet-name>
+        <servlet-class>task2.MyServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Response Servlet</servlet-name>
         <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>My Servlet</servlet-name>
+        <url-pattern>/helloo</url-pattern>
     </servlet-mapping>
 </web-app>

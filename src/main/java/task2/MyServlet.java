@@ -1,14 +1,23 @@
 package task2;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Iterator;
 
 public class MyServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String blockedQueryParam = "Stanislav";
+        Iterator<String> stringIterator = req.getParameterNames().asIterator();
+        while (stringIterator.hasNext()) {
+            String next = stringIterator.next();
+            if (next.equals(blockedQueryParam)) {
+                resp.setStatus(400);
+            } else {
+                resp.setStatus(200);
+            }
+        }
     }
 }
