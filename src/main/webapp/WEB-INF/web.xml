@@ -13,7 +13,6 @@
             <param-name>blockedQueryParam</param-name>
             <param-value>Stanislav</param-value>
         </init-param>
-        >
     </servlet>
     <servlet-mapping>
         <servlet-name>Response Servlet</servlet-name>
