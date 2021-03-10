@@ -9,6 +9,11 @@
     <servlet>
         <servlet-name>My Servlet</servlet-name>
         <servlet-class>task2.MyServlet</servlet-class>
+        <init-param>
+            <param-name>blockedQueryParam</param-name>
+            <param-value>Stanislav</param-value>
+        </init-param>
+        >
     </servlet>
     <servlet-mapping>
         <servlet-name>Response Servlet</servlet-name>
